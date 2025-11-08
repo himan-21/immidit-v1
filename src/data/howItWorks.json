@@ -1,0 +1,116 @@
+{
+  "emergencyCare": {
+    "title": "Customer Journey - Quick On-demand Care Flow",
+    "subtitle": "🚨 (e.g., accident, sudden illness, urgent wound dressing)",
+    "steps": [
+      {
+        "icon": "📱",
+        "title": "Request Help",
+        "description": "Open app → Describe your problem briefly (or call our hotline)",
+        "example": "High fever, need vitals check and blood sample"
+      },
+      {
+        "icon": "🔍", 
+        "title": "Instant Matching",
+        "description": "System notifies nearby available nurses within 4-5 km. Nurse sees your 2-line problem summary → Accepts request"
+      },
+      {
+        "icon": "📍",
+        "title": "Track in Real-Time", 
+        "description": "Watch your nurse's live location as they head to you",
+        "note": "Average arrival time: 20-30 minutes"
+      },
+      {
+        "icon": "🩺",
+        "title": "Care & Smart Escalation",
+        "description": "Nurse performs vitals check + immediate treatment. If vitals are critical → System auto-escalates to doctor via video teleconsultation. Diagnosis recorded → Prescription + bill generated instantly"
+      }
+    ]
+  },
+  "routineCare": {
+    "title": "Customer Journey - Routine Care Flow",
+    "subtitle": "🏥 (e.g., daily wound dressing, elderly monitoring, post-surgery care)",
+    "steps": [
+      {
+        "icon": "📅",
+        "title": "Schedule Visit",
+        "description": "Book daily/weekly visits at your preferred time slots"
+      },
+      {
+        "icon": "👨‍⚕️",
+        "title": "Assigned Nurse",
+        "description": "Dedicated nurse assigned for continuity of care"
+      },
+      {
+        "icon": "🩹",
+        "title": "Care Delivered", 
+        "description": "Nurse arrives at scheduled time → Performs care → Records progress in app"
+      },
+      {
+        "icon": "📊",
+        "title": "Track Progress",
+        "description": "View care history, reports, and vitals trends in your dashboard"
+      }
+    ]
+  },
+  "nurses": {
+    "title": "For Nurses/Paramedics",
+    "steps": [
+      {
+        "icon": "✅",
+        "title": "Registration",
+        "description": "Sign up → Upload credentials → Background verification"
+      },
+      {
+        "icon": "📲",
+        "title": "Receive Requests",
+        "description": "Get notified of nearby patient requests with 2-line problem summary"
+      },
+      {
+        "icon": "🗺️",
+        "title": "Accept & Navigate",
+        "description": "Accept request → GPS navigation to patient location"
+      },
+      {
+        "icon": "💉",
+        "title": "Provide Care",
+        "description": "Perform vitals check + treatment → Record diagnosis → Escalate to doctor if needed"
+      },
+      {
+        "icon": "💰",
+        "title": "Get Paid",
+        "description": "Instant payout after service completion (80-85% of visit fee)"
+      }
+    ]
+  },
+  "doctors": {
+    "title": "For Doctors (Teleconsultation)",
+    "steps": [
+      {
+        "icon": "✅",
+        "title": "Registration",
+        "description": "Sign up → Medical license verification → Onboarding"
+      },
+      {
+        "icon": "🔔",
+        "title": "Receive Escalations",
+        "description": "Get notified when nurse escalates a case (critical vitals or complex diagnosis)"
+      },
+      {
+        "icon": "📹",
+        "title": "Video Consultation",
+        "description": "Join video call → Review vitals from nurse → Diagnose & prescribe"
+      },
+      {
+        "icon": "🏥",
+        "title": "Hospital Transfer (if needed)",
+        "description": "If diagnosis requires physical examination → Coordinate hospital transfer"
+      },
+      {
+        "icon": "💰",
+        "title": "Get Paid",
+        "description": "Earn per consultation (₹300-500 per teleconsult)"
+      }
+    ]
+  }
+}

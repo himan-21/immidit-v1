@@ -1,0 +1,29 @@
+{
+  "tallyForms": {
+    "waitlist": "https://tally.so/r/waitlist-form",
+    "contact": "https://tally.so/r/contact-form", 
+    "partner": "https://tally.so/r/partnership-form"
+  },
+  "domain": "immidit.com",
+  "colors": {
+    "primary": {
+      "blue": "#3B82F6",
+      "lightBlue": "#93C5FD", 
+      "darkBlue": "#1E40AF"
+    },
+    "accent": {
+      "orange": "#FB923C",
+      "lightOrange": "#FED7AA",
+      "darkOrange": "#EA580C"
+    },
+    "neutral": {
+      "gray": "#6B7280",
+      "lightGray": "#F3F4F6",
+      "darkGray": "#374151"
+    }
+  },
+  "fonts": {
+    "primary": "Inter, system-ui, sans-serif",
+    "heading": "Plus Jakarta Sans, Inter, sans-serif"
+  }
+}

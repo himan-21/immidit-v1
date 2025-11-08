@@ -1,0 +1,10 @@
+{
+  "story": {
+    "title": "The Story",
+    "text": "Priya, a 26-year-old software engineer in Gurgaon, wakes up with a high fever and body ache. She lives alone, and she's too weak to drive to a hospital. She needs someone to check her temperature, assess if it's dengue or just viral, maybe draw a blood sample. But who?\n\nHospitals mean a 30-minute drive, crowded ERs, and 2-hour waits. Home nursing services? They need 24-hour advance booking and cost ₹2,000+ for a single visit. Untrained help from nearby? Risky. She's stuck - sick, alone, and helpless."
+  },
+  "gap": {
+    "title": "The Gap",
+    "text": "In urban India, medical emergencies don't always need a hospital - but finding immediate, verified professional care at home is nearly impossible.\n\nWe fulfill this gap with the help of Verified, nearby medical professionals (nurses, paramedics, lab assistants) who can reach your home in minutes, not hours - without the hospital chaos or premium pricings."
+  }
+}

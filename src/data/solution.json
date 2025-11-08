@@ -1,0 +1,31 @@
+{
+  "intro": "Immidit is your nearest emergency medical response system. We connect you with verified nurses, paramedics, and lab assistants within 4-5 km for immediate home visits.",
+  "services": [
+    {
+      "icon": "⚡",
+      "title": "Emergency care",
+      "description": "Vitals check, minor accident cares, wound dressing, injections (tetanus, rabies, etc.)"
+    },
+    {
+      "icon": "🏥",
+      "title": "Routine care", 
+      "description": "Daily nursing for recovery patients, or regular health monitorings for elderly"
+    },
+    {
+      "icon": "🩺",
+      "title": "Smart escalation",
+      "description": "If vitals are critical, we automatically connect you with a doctor (nurse → doctor)"
+    },
+    {
+      "icon": "📍",
+      "title": "Real-time tracking",
+      "description": "Know exactly when help arrives"
+    },
+    {
+      "icon": "💰",
+      "title": "Transparent pricing",
+      "description": "Pay per visit, no hidden costs"
+    }
+  ],
+  "tagline": "From booking to care - in under 30 minutes."
+}

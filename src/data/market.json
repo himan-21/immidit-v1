@@ -1,0 +1,30 @@
+{
+  "opportunity": {
+    "title": "The Opportunity",
+    "stats": [
+      {
+        "icon": "📊",
+        "text": "India's home healthcare market: ₹5,500+ crores and growing at 20% CAGR (projected to reach ₹15,000 crores by 2028)"
+      },
+      {
+        "icon": "👥",
+        "text": "Huge population requiring regular and quick medical attention for early diagnosis"
+      }
+    ]
+  },
+  "demographics": [
+    "Individuals/Nuclear families in Tier-1 cities - working couples with no immediate family support",
+    "Post-COVID shift: Urban Indians now prefer home healthcare over hospital visits for non-critical care"
+  ],
+  "beachhead": {
+    "title": "Our beachhead for Pilot run - Gurgaon",
+    "stats": [
+      "Population: 1.2M+",
+      "Affluent suburbs with limited immediate medical access", 
+      "High concentration of young professionals living alone",
+      "Growing elderly population in residential societies"
+    ]
+  },
+  "bottleneck": "The bottleneck? Supply. There are patients everywhere, but verified, on-demand medical professionals willing to do home visits? Almost none.",
+  "vision": "We're not just building a platform - we're creating a new category: Hyperlocal Medical Care delivered at doorsteps."
+}

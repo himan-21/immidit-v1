@@ -1,0 +1,26 @@
+{
+  "title": "The Team Behind Immidit",
+  "founders": [
+    {
+      "name": "Nikhil Aggarwal",
+      "role": "Co-founder",
+      "bio": "Generalist with a passion for healthcare innovation",
+      "linkedin": "https://www.linkedin.com/in/nikhilkumar25/",
+      "image": "/assets/nikhil.png"
+    },
+    {
+      "name": "Himanshu Pal", 
+      "role": "Co-founder",
+      "bio": "Tech enthusiast driving product development",
+      "linkedin": "https://www.linkedin.com/in/himanshupal23/",
+      "image": "/assets/himanshu.jpg"
+    }
+  ],
+  "advisor": {
+    "name": "Dr. Suvrankar Datta",
+    "role": "Medical Practitioner & Researcher", 
+    "bio": "Guiding us on clinical protocols, medical regulations, and ensuring quality care standards",
+    "linkedin": "https://www.linkedin.com/in/suvrankardatta/"
+  },
+  "companyStatus": "Immidit Pvt Ltd - Incorporation in process"
+}

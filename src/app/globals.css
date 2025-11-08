@@ -3,13 +3,34 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Immidit Color Palette - Warm & Trustworthy */
+  --primary-blue: #3B82F6;
+  --light-blue: #93C5FD;
+  --dark-blue: #1E40AF;
+  
+  --accent-orange: #FB923C;
+  --light-orange: #FED7AA;
+  --dark-orange: #EA580C;
+  
+  --neutral-gray: #6B7280;
+  --light-gray: #F3F4F6;
+  --dark-gray: #374151;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Inter', var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Custom Immidit Colors */
+  --color-primary-blue: var(--primary-blue);
+  --color-light-blue: var(--light-blue);
+  --color-dark-blue: var(--dark-blue);
+  --color-accent-orange: var(--accent-orange);
+  --color-light-orange: var(--light-orange);
+  --color-dark-orange: var(--dark-orange);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +43,76 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom animations for the Immidit website */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+/* Smooth scrolling for the entire document */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom hover effects */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Loading animation for buttons */
+@keyframes pulse-bg {
+  0%, 100% {
+    background-color: rgb(251, 146, 60);
+  }
+  50% {
+    background-color: rgb(254, 215, 170);
+  }
+}
+
+.animate-pulse-bg {
+  animation: pulse-bg 2s ease-in-out infinite;
+}
+
+/* Floating animation for hero elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom border width for CTA buttons */
+.border-3 {
+  border-width: 3px;
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #3B82F6, #FB923C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

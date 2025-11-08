@@ -1,0 +1,25 @@
+{
+  "navigation": [
+    { "label": "Problem", "href": "#problem" },
+    { "label": "Solution", "href": "#solution" },
+    { "label": "Market", "href": "#market" },
+    { "label": "How It Works", "href": "#how-it-works" },
+    { "label": "Business Model", "href": "#business-model" },
+    { "label": "Competition", "href": "#competition" },
+    { "label": "Pilot", "href": "#pilot" },
+    { "label": "Team", "href": "#team" }
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/himanshupal23",
+    "twitter": "#"
+  },
+  "contact": {
+    "email": "hpal895@gmail.com"
+  },
+  "ctas": [
+    { "text": "Join Waitlist", "href": "/join-waitlist" },
+    { "text": "Partner With Us", "href": "/partner" },
+    { "text": "Contact", "href": "/contact" }
+  ],
+  "copyright": "© 2025 Immidit. All rights reserved."
+}
