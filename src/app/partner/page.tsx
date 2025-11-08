@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 const Partner = () => {
   useEffect(() => {
     // Redirect to Tally form
-    window.location.href = 'https://tally.so/r/partnership-form';
+    // window.location.href = 'https://tally.so/r/partnership-form';
   }, []);
 
   return (

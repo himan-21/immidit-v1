@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 const Contact = () => {
   useEffect(() => {
     // Redirect to Tally form
-    window.location.href = 'https://tally.so/r/your-contact-form';
+    // window.location.href = 'https://tally.so/r/contact-form';
   }, []);
 
   return (

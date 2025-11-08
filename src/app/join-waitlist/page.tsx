@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 const JoinWaitlist = () => {
   useEffect(() => {
     // Redirect to Tally form
-    window.location.href = 'https://tally.so/r/waitlist-form';
+    // window.location.href = 'https://tally.so/r/waitlist-form';
   }, []);
 
   return (

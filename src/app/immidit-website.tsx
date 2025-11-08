@@ -62,9 +62,7 @@ const Navbar = () => {
               </button>
             ))}
             <a
-              href={configData.tallyForms.waitlist}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/coming-soon"
               className="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors font-semibold"
             >
               Join Waitlist
@@ -90,9 +88,7 @@ const Navbar = () => {
               </button>
             ))}
             <a
-              href={configData.tallyForms.waitlist}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/coming-soon"
               className="block w-full text-center bg-orange-500 text-white px-3 py-2 rounded-lg hover:bg-orange-600 font-semibold"
             >
               Join Waitlist
@@ -115,10 +111,10 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-300 opacity-10 rounded-full blur-3xl animate-pulse delay-700"></div>
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pt-20 sm:pt-16">
         <div className="animate-fade-in-up">
           {/* Launch Info Badge */}
-          <div className="inline-block mb-6 px-6 py-3 bg-white bg-opacity-20 rounded-full text-orange-500 text-sm font-semibold backdrop-blur-sm border border-white border-opacity-30">
+          <div className="inline-block mb-6 px-4 py-2 sm:px-6 sm:py-3 bg-white bg-opacity-20 rounded-full text-orange-500 text-sm font-semibold backdrop-blur-sm border border-white border-opacity-30">
             {heroData.launchInfo}
           </div>
 
@@ -138,11 +134,9 @@ const Hero = () => {
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 sm:mb-8">
             <a
-              href={configData.tallyForms.waitlist}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/coming-soon"
               className="inline-flex items-center justify-center px-10 py-5 bg-orange-500 text-white rounded-xl font-bold text-xl hover:bg-orange-600 transition-all transform hover:scale-105 shadow-2xl"
             >
               {heroData.cta1.text}
@@ -161,8 +155,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* Scroll Indicator - Hidden on mobile to avoid overlap */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
@@ -807,17 +801,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6">
               <a
-                href={configData.tallyForms.waitlist}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/coming-soon"
                 className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg text-white font-bold transition-colors"
               >
                 Join Waitlist
               </a>
               <a
-                href={configData.tallyForms.partner}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/coming-soon"
                 className="bg-transparent border-2 border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-lg text-white font-bold transition-colors"
               >
                 Partner With Us
