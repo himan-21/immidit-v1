@@ -1,0 +1,26 @@
+{
+  "intro": "We're building a future where quality healthcare is just moments away - connecting you with verified medical professionals who come to you.",
+  "services": [
+    {
+      "icon": "⚡",
+      "title": "Immediate Care",
+      "description": "On-demand medical attention when you need it most"
+    },
+    {
+      "icon": "🏥",
+      "title": "Continuous Support", 
+      "description": "Regular care for ongoing health needs"
+    },
+    {
+      "icon": "🩺",
+      "title": "Smart Care Coordination",
+      "description": "Seamless connection between nurses and doctors when needed"
+    },
+    {
+      "icon": "🔒",
+      "title": "Verified Professionals",
+      "description": "Every healthcare provider thoroughly checked and certified"
+    }
+  ],
+  "tagline": "Healthcare that comes to you, when you need it."
+}

@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IMMIDIT",
-  description: "AI-powered immigration assistance platform - Making global mobility accessible and stress-free",
+  title: "Immidit",
+  description: "Immediate care, verified professionals, home delivered",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

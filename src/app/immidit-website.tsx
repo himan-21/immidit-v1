@@ -1,17 +1,17 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, CheckCircle, Users, Heart, Clock, Shield, TrendingUp, MapPin, Star } from 'lucide-react';
+import { Menu, X, ArrowRight, CheckCircle, Users, Heart, Clock, Shield, TrendingUp, Star } from 'lucide-react';
 
 // Import JSON data
 import heroData from '../data/hero.json';
-import problemData from '../data/problem.json';
-import solutionData from '../data/solution.json';
-import marketData from '../data/market.json';
+import whyWeExistData from '../data/whyWeExist.json';
+import whatWeDoData from '../data/whatWeDo.json';
 import howItWorksData from '../data/howItWorks.json';
-import businessModelData from '../data/businessModel.json';
-import pilotData from '../data/pilot.json';
-import competitionData from '../data/competition.json';
+import medicalProfessionalsData from '../data/medicalProfessionals.json';
+import trustSafetyData from '../data/trustSafety.json';
+import impactData from '../data/impact.json';
+import socialImpactData from '../data/socialImpact.json';
 import teamData from '../data/team.json';
 import footerData from '../data/footer.json';
 import configData from '../data/config.json';
@@ -49,12 +49,12 @@ const Navbar = () => {
             </h1>
           </div>
           
-          <div className="hidden md:flex space-x-8">
-            {footerData.navigation.map((item) => (
+          <div className="hidden lg:flex items-center space-x-6">
+            {footerData.navigation.slice(0, 4).map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href.replace('#', ''))}
-                className={`capitalize hover:text-orange-500 transition-colors ${
+                className={`text-sm font-medium hover:text-orange-500 transition-colors whitespace-nowrap ${
                   scrolled ? 'text-gray-700' : 'text-white'
                 }`}
               >
@@ -62,33 +62,36 @@ const Navbar = () => {
               </button>
             ))}
             <a
-              href="/coming-soon"
-              className="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors font-semibold"
+              href="/join-waitlist"
+              className="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors font-semibold text-sm whitespace-nowrap"
             >
               Join Waitlist
             </a>
           </div>
 
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+          <button 
+            onClick={() => setIsOpen(!isOpen)} 
+            className={`lg:hidden ${scrolled ? 'text-gray-700' : 'text-white'}`}
+          >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="lg:hidden bg-white shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {footerData.navigation.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href.replace('#', ''))}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 capitalize"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50"
               >
                 {item.label}
               </button>
             ))}
             <a
-              href="/coming-soon"
+              href="/join-waitlist"
               className="block w-full text-center bg-orange-500 text-white px-3 py-2 rounded-lg hover:bg-orange-600 font-semibold"
             >
               Join Waitlist
@@ -119,32 +122,32 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             {heroData.companyName}
           </h1>
 
           {/* Tagline */}
-          <p className="text-3xl sm:text-4xl text-white mb-6 font-light">
+          <p className="text-xl sm:text-3xl lg:text-4xl text-white mb-4 sm:mb-6 font-light">
             {heroData.tagline}
           </p>
 
           {/* Subtitle */}
-          <p className="text-xl sm:text-2xl text-white text-opacity-90 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl lg:text-2xl text-white text-opacity-90 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
             {heroData.subtitle}
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 sm:mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16">
             <a
-              href="/coming-soon"
-              className="inline-flex items-center justify-center px-10 py-5 bg-orange-500 text-white rounded-xl font-bold text-xl hover:bg-orange-600 transition-all transform hover:scale-105 shadow-2xl"
+              href="/join-waitlist"
+              className="inline-flex items-center justify-center px-6 py-3 sm:px-10 sm:py-5 bg-orange-500 text-white rounded-xl font-bold text-base sm:text-xl hover:bg-orange-600 transition-all transform hover:scale-105 shadow-2xl"
             >
               {heroData.cta1.text}
               <ArrowRight className="ml-3 h-6 w-6" />
             </a>
             <button
               onClick={() => {
-                const element = document.getElementById('problem');
+                const element = document.getElementById('why-we-exist');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
               className="inline-flex items-center justify-center px-10 py-5 bg-transparent border-3 border-white text-white rounded-xl font-bold text-xl hover:bg-white hover:text-blue-600 transition-all transform hover:scale-105"
@@ -165,32 +168,32 @@ const Hero = () => {
   );
 };
 
-// ==================== PROBLEM STATEMENT ====================
-const ProblemStatement = () => {
+// ==================== WHY WE EXIST ====================
+const WhyWeExist = () => {
   return (
-    <section id="problem" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="why-we-exist" className="py-12 sm:py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">The Problem</h2>
-          <div className="w-32 h-1 bg-orange-500 mx-auto"></div>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">Why We Exist</h2>
+          <div className="w-24 sm:w-32 h-1 bg-orange-500 mx-auto"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center">
           {/* Story Card */}
-          <div className="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100">
-            <div className="inline-block px-6 py-3 bg-red-100 text-red-600 rounded-full text-sm font-bold mb-8">
-              {problemData.story.title}
+          <div className="bg-white p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-2xl border border-gray-100">
+            <div className="inline-block px-4 py-2 sm:px-6 sm:py-3 bg-blue-100 text-blue-600 rounded-full text-xs sm:text-sm font-bold mb-4 sm:mb-8">
+              {whyWeExistData.story.title}
             </div>
-            <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line">
-              {problemData.story.text}
+            <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed whitespace-pre-line">
+              {whyWeExistData.story.text}
             </p>
           </div>
 
           {/* Gap Card */}
-          <div className="bg-gradient-to-br from-blue-600 to-orange-500 p-10 rounded-3xl shadow-2xl text-white">
-            <h3 className="text-3xl font-bold mb-8">{problemData.gap.title}</h3>
-            <p className="text-xl leading-relaxed whitespace-pre-line opacity-95">
-              {problemData.gap.text}
+          <div className="bg-gradient-to-br from-blue-400 to-purple-500 p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-2xl text-white">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8">{whyWeExistData.gap.title}</h3>
+            <p className="text-base sm:text-lg lg:text-xl leading-relaxed whitespace-pre-line opacity-95">
+              {whyWeExistData.gap.text}
             </p>
           </div>
         </div>
@@ -199,118 +202,35 @@ const ProblemStatement = () => {
   );
 };
 
-// ==================== SOLUTION SECTION ====================
-const Solution = () => {
+// ==================== WHAT WE DO ====================
+const WhatWeDo = () => {
   return (
-    <section id="solution" className="py-20 bg-white">
+    <section id="what-we-do" className="py-12 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">Our Solution</h2>
-          <div className="w-32 h-1 bg-blue-600 mx-auto mb-8"></div>
-          <p className="text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            {solutionData.intro}
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">What We Do</h2>
+          <div className="w-24 sm:w-32 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-base sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            {whatWeDoData.intro}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {solutionData.services.map((service, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-12 sm:mb-16">
+          {whatWeDoData.services.map((service, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-50 to-orange-50 p-8 rounded-2xl hover:shadow-xl transition-all transform hover:-translate-y-2"
+              className="bg-gradient-to-br from-blue-50 to-orange-50 p-6 sm:p-8 rounded-xl sm:rounded-2xl hover:shadow-xl transition-all transform hover:-translate-y-2"
             >
-              <div className="text-5xl mb-6">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-              <p className="text-gray-600 text-lg">{service.description}</p>
+              <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">{service.icon}</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{service.title}</h3>
+              <p className="text-gray-600 text-sm sm:text-base lg:text-lg">{service.description}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center text-orange-500 p-8 rounded-2xl">
           <p className="text-3xl font-bold">
-            {solutionData.tagline}
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// ==================== MAIN APP COMPONENT ====================
-const ImmiditWebsite = () => {
-  return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <ProblemStatement />
-      <Solution />
-      <MarketSize />
-      <HowItWorks />
-      <BusinessModel />
-      <Competition />
-      <Pilot />
-      <Team />
-      <Footer />
-    </div>
-  );
-};
-
-// ==================== MARKET SIZE SECTION ====================
-const MarketSize = () => {
-  return (
-    <section id="market" className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">Market Size</h2>
-          <div className="w-32 h-1 bg-orange-500 mx-auto mb-8"></div>
-          <h3 className="text-3xl font-bold text-blue-600 mb-8">{marketData.opportunity.title}</h3>
-        </div>
-
-        {/* Opportunity Stats */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {marketData.opportunity.stats.map((stat, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-              <div className="text-4xl mb-4">{stat.icon}</div>
-              <p className="text-lg text-gray-700">{stat.text}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Demographics */}
-        <div className="bg-gradient-to-br from-blue-600 to-orange-500 p-10 rounded-3xl shadow-xl text-white mb-16">
-          <h3 className="text-3xl font-bold mb-8">Target Demographics</h3>
-          <ul className="space-y-4">
-            {marketData.demographics.map((demo, index) => (
-              <li key={index} className="flex items-start">
-                <CheckCircle className="h-6 w-6 mr-4 flex-shrink-0 mt-1" />
-                <span className="text-lg">{demo}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Beachhead Market */}
-        <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 mb-16">
-          <div className="flex items-center mb-8">
-            <MapPin className="h-8 w-8 text-blue-600 mr-4" />
-            <h3 className="text-3xl font-bold text-gray-900">{marketData.beachhead.title}</h3>
-          </div>
-          <ul className="space-y-4">
-            {marketData.beachhead.stats.map((stat, index) => (
-              <li key={index} className="flex items-start text-gray-700">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0 mt-1" />
-                <span className="text-lg">{stat}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Vision */}
-        <div className="text-center space-y-8">
-          <p className="text-xl text-gray-700 italic max-w-4xl mx-auto">
-            {marketData.bottleneck}
-          </p>
-          <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">
-            {marketData.vision}
+            {whatWeDoData.tagline}
           </p>
         </div>
       </div>
@@ -323,16 +243,16 @@ const HowItWorks = () => {
   const [activeTab, setActiveTab] = useState('emergencyCare');
 
   const FlowStep = ({ step, index }: { step: any, index: number }) => (
-    <div className="flex items-start space-x-6 mb-12">
-      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-600 to-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg">
+    <div className="flex items-start space-x-4 sm:space-x-6 mb-8 sm:mb-12">
+      <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-400 to-purple-500 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold shadow-lg">
         {index + 1}
       </div>
       <div className="flex-1">
-        <div className="flex items-center mb-4">
-          <span className="text-3xl mr-3">{step.icon}</span>
-          <h4 className="text-2xl font-bold text-gray-900">{step.title}</h4>
+        <div className="flex items-center mb-3 sm:mb-4">
+          <span className="text-2xl sm:text-3xl mr-2 sm:mr-3">{step.icon}</span>
+          <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">{step.title}</h4>
         </div>
-        <p className="text-gray-700 text-lg mb-2">{step.description}</p>
+        <p className="text-gray-700 text-sm sm:text-base lg:text-lg mb-2">{step.description}</p>
         {step.example && (
           <p className="text-sm text-blue-600 italic">Example: {step.example}</p>
         )}
@@ -344,15 +264,15 @@ const HowItWorks = () => {
   );
 
   return (
-    <section id="how-it-works" className="py-20 bg-white">
+    <section id="how-it-works" className="py-12 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">How It Works</h2>
-          <div className="w-32 h-1 bg-blue-600 mx-auto"></div>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">How It Works</h2>
+          <div className="w-24 sm:w-32 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 sm:mb-16">
           {[
             { id: 'emergencyCare', label: 'Quick on-demand Care', icon: '🚨' },
             { id: 'routineCare', label: 'Routine Care', icon: '🏥' },
@@ -362,7 +282,7 @@ const HowItWorks = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-8 py-4 rounded-xl font-bold transition-all text-lg ${
+              className={`px-4 py-2 sm:px-8 sm:py-4 rounded-xl font-bold transition-all text-sm sm:text-base lg:text-lg ${
                 activeTab === tab.id
                   ? 'bg-gradient-to-r from-blue-600 to-orange-500 text-white shadow-xl transform scale-105'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -375,13 +295,13 @@ const HowItWorks = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-12 rounded-3xl shadow-lg">
+        <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-6 sm:p-12 rounded-2xl sm:rounded-3xl shadow-lg">
           {activeTab === 'emergencyCare' && (
             <div>
-              <h3 className="text-4xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
                 {howItWorksData.emergencyCare.title}
               </h3>
-              <p className="text-gray-600 mb-12 text-xl italic">
+              <p className="text-gray-600 mb-8 sm:mb-12 text-base sm:text-lg lg:text-xl italic">
                 {howItWorksData.emergencyCare.subtitle}
               </p>
               {howItWorksData.emergencyCare.steps.map((step, index) => (
@@ -431,194 +351,265 @@ const HowItWorks = () => {
   );
 };
 
-// ==================== BUSINESS MODEL SECTION ====================
-const BusinessModel = () => {
+// ==================== IMPACT SECTION ====================
+const Impact = () => {
   return (
-    <section id="business-model" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="impact" className="py-12 sm:py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">Business Model</h2>
-          <div className="w-32 h-1 bg-orange-500 mx-auto mb-8"></div>
-          <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">
-            {businessModelData.title}
-          </p>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">{impactData.title}</h2>
+          <div className="w-24 sm:w-32 h-1 bg-orange-500 mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-base sm:text-xl lg:text-2xl text-gray-700">{impactData.subtitle}</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Current Revenue Model */}
-          <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
-            <div className="inline-block px-6 py-3 bg-green-100 text-green-600 rounded-full text-sm font-bold mb-8">
-              {businessModelData.currentModel.title}
-            </div>
-            <div className="space-y-8">
-              {businessModelData.currentModel.items.map((item, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="text-4xl">{item.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                    <p className="text-gray-600 text-lg">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Current Status */}
+        <div className="bg-gradient-to-br from-blue-400 to-purple-500 p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-xl text-white mb-12 sm:mb-16">
+          <div className="flex items-center mb-6 sm:mb-8">
+            <Clock className="h-8 w-8 sm:h-10 sm:w-10 mr-3 sm:mr-4" />
+            <h3 className="text-2xl sm:text-3xl font-bold">{impactData.currentStatus.title}</h3>
           </div>
-
-          {/* Future Revenue Streams */}
-          <div className="bg-gradient-to-br from-blue-600 to-orange-500 p-10 rounded-3xl shadow-xl text-white">
-            <div className="inline-block px-6 py-3 bg-white text-blue-500 bg-opacity-20 rounded-full text-sm font-bold mb-8">
-              {businessModelData.futureStreams.title}
-            </div>
-            <div className="space-y-8">
-              {businessModelData.futureStreams.items.map((item, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="text-4xl">{item.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                    <p className="text-white text-opacity-90 text-lg">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// ==================== COMPETITION SECTION ====================
-const Competition = () => {
-  return (
-    <section id="competition" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">{competitionData.title}</h2>
-          <div className="w-32 h-1 bg-blue-600 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-            {competitionData.intro}
-          </p>
-        </div>
-
-        {/* Existing Players */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">{competitionData.existingPlayers.title}</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {competitionData.existingPlayers.competitors.map((competitor, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl border border-gray-200">
-                <div className="flex items-center mb-6">
-                  <div className="text-4xl mr-4">{competitor.icon}</div>
-                  <h4 className="text-xl font-bold text-gray-900">{competitor.title}</h4>
-                </div>
-                <div className="space-y-4">
-                  <div>
-                    <span className="text-sm font-bold text-gray-600">Focus: </span>
-                    <span className="text-gray-700">{competitor.focus}</span>
-                  </div>
-                  {competitor.pricing && (
-                    <div>
-                      <span className="text-sm font-bold text-gray-600">Pricing: </span>
-                      <span className="text-gray-700">{competitor.pricing}</span>
-                    </div>
-                  )}
-                  {competitor.booking && (
-                    <div>
-                      <span className="text-sm font-bold text-gray-600">Booking: </span>
-                      <span className="text-gray-700">{competitor.booking}</span>
-                    </div>
-                  )}
-                  <div className="pt-4 border-t border-gray-300">
-                    <span className="text-sm font-bold text-red-600">Gap: </span>
-                    <span className="text-gray-700">{competitor.gap}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Our Edge */}
-        <div className="bg-gradient-to-br from-blue-600 to-orange-500 p-12 rounded-3xl shadow-xl text-white">
-          <h3 className="text-4xl font-bold mb-12 text-center">{competitionData.ourEdge.title}</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {competitionData.ourEdge.differentiators.map((diff, index) => (
-              <div key={index} className="bg-white bg-opacity-10 p-8 rounded-2xl backdrop-blur-sm">
-                <div className="text-4xl mb-4">{diff.icon}</div>
-                <h4 className="text-xl text-gray-900 font-bold mb-4">{diff.title}</h4>
-                <p className="text-gray-500 text-opacity-90">{diff.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// ==================== PILOT SECTION ====================
-const Pilot = () => {
-  return (
-    <section id="pilot" className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">{pilotData.title}</h2>
-          <div className="w-32 h-1 bg-orange-500 mx-auto mb-8"></div>
-          <p className="text-2xl text-gray-700">{pilotData.subtitle}</p>
-        </div>
-
-        {/* Launch Details */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
-            <div className="flex items-center mb-8">
-              <MapPin className="h-10 w-10 text-blue-600 mr-4" />
-              <h3 className="text-3xl font-bold text-gray-900">Launch Details</h3>
-            </div>
-            <div className="space-y-6">
-              <p className="text-lg text-gray-700">{pilotData.details.location}</p>
-              <p className="text-lg text-gray-700">{pilotData.details.timeline}</p>
-              <p className="text-lg text-gray-700">{pilotData.details.coverage}</p>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-blue-600 to-orange-500 p-10 rounded-3xl shadow-xl text-white">
-            <div className="flex items-center mb-8">
-              <Clock className="h-10 w-10 mr-4" />
-              <h3 className="text-3xl font-bold">{pilotData.currentStatus.title}</h3>
-            </div>
-            <ul className="space-y-4">
-              {pilotData.currentStatus.items.map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="h-6 w-6 mr-3 flex-shrink-0 mt-1" />
-                  <span className="text-lg">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Pilot Goals */}
-        <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 mb-16">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">{pilotData.goals.title}</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {pilotData.goals.items.map((goal, index) => (
-              <div key={index} className="bg-gradient-to-br from-blue-50 to-orange-50 p-8 rounded-2xl text-center">
-                <div className="text-4xl mb-4">{goal.icon}</div>
-                <p className="text-gray-700 font-semibold text-lg">{goal.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Why Gurgaon */}
-        <div className="bg-gradient-to-br from-blue-600 to-orange-500 p-10 rounded-3xl shadow-xl text-white">
-          <h3 className="text-3xl font-bold mb-8">{pilotData.whyGurgaon.title}</h3>
-          <ul className="space-y-4">
-            {pilotData.whyGurgaon.reasons.map((reason, index) => (
+          <ul className="space-y-3 sm:space-y-4">
+            {impactData.currentStatus.items.map((item, index) => (
               <li key={index} className="flex items-start">
-                <CheckCircle className="h-6 w-6 mr-3 flex-shrink-0 mt-1" />
-                <span className="text-lg">{reason}</span>
+                <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3 flex-shrink-0 mt-1" />
+                <span className="text-base sm:text-lg">{item}</span>
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Launching Soon */}
+        <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 mb-16">
+          <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center">{impactData.launch.title}</h3>
+          <p className="text-xl text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
+            {impactData.launch.text}
+          </p>
+        </div>
+
+        {/* Our Vision */}
+        <div className="bg-gradient-to-br from-blue-400 to-purple-500 p-10 rounded-3xl shadow-xl text-white">
+          <h3 className="text-3xl font-bold mb-6 text-center">{impactData.expansion.title}</h3>
+          <p className="text-xl text-center leading-relaxed opacity-95">
+            {impactData.expansion.text}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ==================== MEDICAL PROFESSIONALS SECTION ====================
+const MedicalProfessionals = () => {
+  return (
+    <section id="medical-professionals" className="py-12 sm:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">{medicalProfessionalsData.title}</h2>
+          <div className="w-24 sm:w-32 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-base sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            {medicalProfessionalsData.subtitle}
+          </p>
+          <p className="text-sm sm:text-base lg:text-xl text-gray-600 max-w-3xl mx-auto mt-4 sm:mt-6">
+            {medicalProfessionalsData.intro}
+          </p>
+        </div>
+
+        {/* For Nurses & Paramedics */}
+        <div className="mb-12 sm:mb-20">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">
+            {medicalProfessionalsData.forNurses.title}
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {medicalProfessionalsData.forNurses.benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-blue-50 to-orange-50 p-6 sm:p-8 rounded-xl sm:rounded-2xl hover:shadow-xl transition-all transform hover:-translate-y-2"
+              >
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">{benefit.icon}</div>
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{benefit.title}</h4>
+                <p className="text-gray-600 text-sm sm:text-base lg:text-lg">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* For Doctors */}
+        <div className="mb-12 sm:mb-20">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">
+            {medicalProfessionalsData.forDoctors.title}
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {medicalProfessionalsData.forDoctors.benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-blue-50 to-orange-50 p-6 sm:p-8 rounded-xl sm:rounded-2xl hover:shadow-xl transition-all transform hover:-translate-y-2"
+              >
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">{benefit.icon}</div>
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{benefit.title}</h4>
+                <p className="text-gray-600 text-sm sm:text-base lg:text-lg">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* How to Join */}
+        <div className="bg-gradient-to-br from-blue-400 to-purple-500 p-6 sm:p-12 rounded-2xl sm:rounded-3xl shadow-xl text-white">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 text-center">{medicalProfessionalsData.howToJoin.title}</h3>
+          <div className="grid md:grid-cols-4 gap-6 sm:gap-8">
+            {medicalProfessionalsData.howToJoin.steps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white text-orange-400 bg-opacity-20 rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold mx-auto mb-4 sm:mb-6">
+                  {step.number}
+                </div>
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">{step.title}</h4>
+                <p className="text-white text-opacity-90 text-sm sm:text-base">{step.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mt-8 sm:mt-12">
+            <a
+              href="/join-waitlist"
+              className="inline-flex items-center justify-center px-6 py-3 sm:px-10 sm:py-5 bg-white text-blue-600 rounded-xl font-bold text-base sm:text-xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
+            >
+              {medicalProfessionalsData.cta.primary}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ==================== TRUST & SAFETY SECTION ====================
+const TrustSafety = () => {
+  return (
+    <section id="trust-safety" className="py-12 sm:py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">{trustSafetyData.title}</h2>
+          <div className="w-24 sm:w-32 h-1 bg-orange-500 mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-base sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            {trustSafetyData.subtitle}
+          </p>
+          <p className="text-sm sm:text-base lg:text-xl text-gray-600 max-w-3xl mx-auto mt-4 sm:mt-6">
+            {trustSafetyData.intro}
+          </p>
+        </div>
+
+        {/* Verification Process */}
+        <div className="mb-12 sm:mb-20">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
+            {trustSafetyData.verification.title}
+          </h3>
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
+            {trustSafetyData.verification.description}
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {trustSafetyData.verification.steps.map((step, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 border border-gray-100"
+              >
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">{step.icon}</div>
+                <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">{step.title}</h4>
+                <p className="text-gray-600 text-sm sm:text-base">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Safety Measures */}
+        <div className="bg-white p-12 rounded-3xl shadow-xl border border-gray-100">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 text-center">
+            {trustSafetyData.safety.title}
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {trustSafetyData.safety.protocols.map((protocol, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <div className="text-2xl sm:text-3xl lg:text-4xl flex-shrink-0">{protocol.icon}</div>
+                <div>
+                  <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">{protocol.title}</h4>
+                  <p className="text-sm sm:text-base text-gray-600">{protocol.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Commitment */}
+          <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-8 rounded-2xl text-center">
+            <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{trustSafetyData.commitment.title}</h4>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+              {trustSafetyData.commitment.text}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ==================== SOCIAL IMPACT SECTION ====================
+const SocialImpact = () => {
+  return (
+    <section id="social-impact" className="py-12 sm:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">{socialImpactData.title}</h2>
+          <div className="w-24 sm:w-32 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-base sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            {socialImpactData.subtitle}
+          </p>
+          <p className="text-sm sm:text-base lg:text-xl text-gray-600 max-w-3xl mx-auto mt-4 sm:mt-6">
+            {socialImpactData.intro}
+          </p>
+        </div>
+
+        {/* Mission */}
+        <div className="bg-gradient-to-br from-blue-400 to-purple-500 p-6 sm:p-12 rounded-2xl sm:rounded-3xl shadow-xl text-white mb-12 sm:mb-16">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center">{socialImpactData.mission.title}</h3>
+          <p className="text-base sm:text-xl lg:text-2xl text-center leading-relaxed opacity-95 max-w-4xl mx-auto">
+            {socialImpactData.mission.text}
+          </p>
+        </div>
+
+        {/* Impact Areas */}
+        <div className="mb-12 sm:mb-20">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">
+            {socialImpactData.impact.title}
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {socialImpactData.impact.areas.map((area, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-blue-50 to-orange-50 p-6 sm:p-8 rounded-xl sm:rounded-2xl hover:shadow-xl transition-all transform hover:-translate-y-2"
+              >
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">{area.icon}</div>
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{area.title}</h4>
+                <p className="text-gray-600 text-sm sm:text-base lg:text-lg">{area.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Vision */}
+        <div className="bg-white p-6 sm:p-12 rounded-2xl sm:rounded-3xl shadow-xl border border-gray-100 mb-12 sm:mb-16">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">{socialImpactData.vision.title}</h3>
+          <p className="text-base sm:text-xl lg:text-2xl text-gray-700 text-center max-w-4xl mx-auto leading-relaxed">
+            {socialImpactData.vision.text}
+          </p>
+        </div>
+
+        {/* Values */}
+        <div className="bg-gradient-to-br from-blue-400 to-purple-500 p-6 sm:p-12 rounded-2xl sm:rounded-3xl shadow-xl text-white">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 text-center">{socialImpactData.values.title}</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {socialImpactData.values.principles.map((principle, index) => (
+              <div key={index} className="text-center">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">{principle.title}</h4>
+                <p className="text-white text-opacity-90 text-sm sm:text-base">{principle.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -628,19 +619,19 @@ const Pilot = () => {
 // ==================== TEAM SECTION ====================
 const Team = () => {
   return (
-    <section id="team" className="py-20 bg-white">
+    <section id="team" className="py-12 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">{teamData.title}</h2>
-          <div className="w-32 h-1 bg-blue-600 mx-auto"></div>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">{teamData.title}</h2>
+          <div className="w-24 sm:w-32 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
         {/* Founders */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
           {teamData.founders.map((founder, index) => (
-            <div key={index} className="bg-gradient-to-br from-blue-50 to-orange-50 p-10 rounded-3xl shadow-lg border border-gray-100">
-              <div className="flex items-center mb-8">
-                <div className="w-24 h-24 rounded-full overflow-hidden mr-6 shadow-lg border-4 border-white">
+            <div key={index} className="bg-gradient-to-br from-blue-50 to-orange-50 p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-lg border border-gray-100">
+              <div className="flex items-center mb-6 sm:mb-8">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mr-4 sm:mr-6 shadow-lg border-4 border-white">
                   <img 
                     src={founder.image} 
                     alt={founder.name} 
@@ -648,11 +639,11 @@ const Team = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">{founder.name}</h3>
-                  <p className="text-blue-600 font-bold text-lg">{founder.role}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{founder.name}</h3>
+                  <p className="text-blue-600 font-bold text-base sm:text-lg">{founder.role}</p>
                 </div>
               </div>
-              <p className="text-gray-700 mb-6 text-lg">{founder.bio}</p>
+              <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg">{founder.bio}</p>
               <a
                 href={founder.linkedin}
                 target="_blank"
@@ -676,7 +667,7 @@ const Team = () => {
         */}
 
         {/* Advisor 
-        <div className="bg-gradient-to-br from-blue-600 to-orange-500 p-10 rounded-3xl shadow-xl text-white mb-16">
+        <div className="bg-gradient-to-br from-blue-400 to-purple-500 p-10 rounded-3xl shadow-xl text-white mb-16">
           <h3 className="text-3xl font-bold mb-8 text-center">Advisor</h3>
           <div className="text-center max-w-3xl mx-auto">
             <div className="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-4xl font-bold mx-auto mb-6">
@@ -699,11 +690,11 @@ const Team = () => {
         */}
 
         {/* Company Status */}
-        <div className="text-center bg-gray-50 p-8 rounded-2xl">
-          <div className="inline-block px-6 py-3 bg-green-100 text-green-600 rounded-full text-sm font-bold mb-4">
+        <div className="text-center bg-gray-50 p-6 sm:p-8 rounded-2xl">
+          <div className="inline-block px-4 py-2 sm:px-6 sm:py-3 bg-green-100 text-green-600 rounded-full text-xs sm:text-sm font-bold mb-3 sm:mb-4">
             Company Status
           </div>
-          <p className="text-gray-700 text-xl font-semibold">{teamData.companyStatus}</p>
+          <p className="text-gray-700 text-base sm:text-lg lg:text-xl font-semibold">{teamData.companyStatus}</p>
         </div>
       </div>
     </section>
@@ -799,16 +790,16 @@ const Footer = () => {
             <p className="text-gray-400 mb-4 md:mb-0">
               {footerData.copyright}
             </p>
-            <div className="flex space-x-6">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
               <a
-                href="/coming-soon"
-                className="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-lg text-white font-bold transition-colors"
+                href="/join-waitlist"
+                className="bg-orange-500 hover:bg-orange-600 px-4 py-2 sm:px-6 sm:py-3 lg:px-8 rounded-lg text-white text-sm sm:text-base font-bold transition-colors text-center"
               >
                 Join Waitlist
               </a>
               <a
-                href="/coming-soon"
-                className="bg-transparent border-2 border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-lg text-white font-bold transition-colors"
+                href="/partner"
+                className="bg-transparent border-2 border-blue-600 hover:bg-blue-600 px-4 py-2 sm:px-6 sm:py-3 lg:px-8 rounded-lg text-white text-sm sm:text-base font-bold transition-colors text-center"
               >
                 Partner With Us
               </a>
@@ -817,6 +808,25 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+  );
+};
+
+// ==================== MAIN APP COMPONENT ====================
+const ImmiditWebsite = () => {
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <WhyWeExist />
+      <WhatWeDo />
+      <HowItWorks />
+      <MedicalProfessionals />
+      <TrustSafety />
+      <Impact />
+      <SocialImpact />
+      <Team />
+      <Footer />
+    </div>
   );
 };
 

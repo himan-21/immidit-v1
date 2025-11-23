@@ -1,0 +1,70 @@
+{
+  "title": "Your Safety is Our Priority",
+  "subtitle": "Comprehensive verification and safety protocols for peace of mind",
+  "intro": "We take your health and safety seriously. Every healthcare professional on our platform goes through rigorous verification to ensure you receive care from qualified, trustworthy professionals.",
+  "verification": {
+    "title": "Professional Verification",
+    "description": "Multi-step verification process for every healthcare provider",
+    "steps": [
+      {
+        "icon": "🎓",
+        "title": "Credential Verification",
+        "description": "Thorough validation of educational qualifications and professional certifications"
+      },
+      {
+        "icon": "📋",
+        "title": "License Authentication",
+        "description": "Verification of active medical licenses and registrations with relevant councils"
+      },
+      {
+        "icon": "🔍",
+        "title": "Background Checks",
+        "description": "Comprehensive background screening for professional history and conduct"
+      },
+      {
+        "icon": "📝",
+        "title": "Reference Validation",
+        "description": "Professional references checked and validated before onboarding"
+      }
+    ]
+  },
+  "safety": {
+    "title": "Safety Measures",
+    "protocols": [
+      {
+        "icon": "🛡️",
+        "title": "Insurance Coverage",
+        "description": "Professional liability coverage for all services provided through our platform"
+      },
+      {
+        "icon": "📍",
+        "title": "Real-time Tracking",
+        "description": "Live location tracking for transparency and safety during home visits"
+      },
+      {
+        "icon": "🚨",
+        "title": "Emergency Protocols",
+        "description": "Established procedures for handling emergencies and escalating critical cases"
+      },
+      {
+        "icon": "🔐",
+        "title": "Data Privacy",
+        "description": "Strict confidentiality and secure handling of all medical information"
+      },
+      {
+        "icon": "⭐",
+        "title": "Quality Monitoring",
+        "description": "Continuous monitoring of service quality and patient feedback"
+      },
+      {
+        "icon": "📞",
+        "title": "24/7 Support",
+        "description": "Always available support team for any concerns or assistance needed"
+      }
+    ]
+  },
+  "commitment": {
+    "title": "Our Commitment",
+    "text": "We are committed to maintaining the highest standards of healthcare delivery. Every professional, every service, every interaction is designed with your safety and wellbeing at the center."
+  }
+}

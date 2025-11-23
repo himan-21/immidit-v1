@@ -1,0 +1,69 @@
+{
+  "title": "Building Healthier Communities",
+  "subtitle": "Our vision for accessible, equitable healthcare for all",
+  "intro": "Healthcare shouldn't be a privilege - it should be accessible to everyone, regardless of where they live or their circumstances. We're working to bridge the gap between those who need care and those who can provide it.",
+  "mission": {
+    "title": "Our Mission",
+    "text": "To democratize healthcare access across urban India by connecting verified medical professionals with people who need immediate, quality care at home."
+  },
+  "impact": {
+    "title": "The Impact We're Creating",
+    "areas": [
+      {
+        "icon": "🏠",
+        "title": "Bringing Care Home",
+        "description": "Eliminating the need for stressful hospital visits for non-critical medical needs"
+      },
+      {
+        "icon": "⚡",
+        "title": "Immediate Access",
+        "description": "Reducing the gap between needing care and receiving it, especially in urgent situations"
+      },
+      {
+        "icon": "👨‍⚕️",
+        "title": "Empowering Professionals",
+        "description": "Creating meaningful opportunities for nurses and healthcare workers with flexible, fair work"
+      },
+      {
+        "icon": "🌍",
+        "title": "Reaching Everyone",
+        "description": "Making quality healthcare accessible regardless of mobility, time, or location constraints"
+      },
+      {
+        "icon": "💙",
+        "title": "Supporting Families",
+        "description": "Helping families care for their loved ones with professional support at home"
+      },
+      {
+        "icon": "🔗",
+        "title": "Connecting Communities",
+        "description": "Building networks of care that strengthen local healthcare ecosystems"
+      }
+    ]
+  },
+  "vision": {
+    "title": "Our Vision",
+    "text": "We envision an India where no one has to choose between their health and convenience, where quality medical care is always within reach, and where healthcare professionals are valued and empowered to serve their communities effectively."
+  },
+  "values": {
+    "title": "What Drives Us",
+    "principles": [
+      {
+        "title": "Accessibility First",
+        "description": "Healthcare should be available to all, whenever needed"
+      },
+      {
+        "title": "Quality Always",
+        "description": "Never compromising on the standard of care provided"
+      },
+      {
+        "title": "Dignity & Respect",
+        "description": "Treating patients and professionals with equal respect and dignity"
+      },
+      {
+        "title": "Community Care",
+        "description": "Building stronger, healthier communities together"
+      }
+    ]
+  }
+}

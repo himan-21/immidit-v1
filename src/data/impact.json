@@ -1,0 +1,21 @@
+{
+  "title": "Where We're Going to Make Impact",
+  "subtitle": "Starting our journey soon",
+  "currentStatus": {
+    "title": "Our Progress",
+    "items": [
+      "Building our network of verified medical professionals",
+      "Developing our platform for seamless care delivery", 
+      "Engaging with communities and residential societies",
+      "Establishing partnerships with healthcare providers"
+    ]
+  },
+  "launch": {
+    "title": "Launching Soon",
+    "text": "We're preparing to launch in select metro cities, bringing immediate, verified medical care to urban homes where it's needed most."
+  },
+  "expansion": {
+    "title": "Our Vision",
+    "text": "Our mission is to bring quality healthcare to homes across urban India - making medical care accessible to everyone, everywhere, whenever they need it."
+  }
+}

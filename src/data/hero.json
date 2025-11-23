@@ -1,14 +1,14 @@
 {
   "companyName": "Immidit",
   "tagline": "Immediate care, verified professionals, home delivered",
-  "subtitle": "Your nearest emergency medical response system connecting you with verified nurses and paramedics within 4-5 km",
+  "subtitle": "Your nearest emergency medical response system connecting you with verified nurses and paramedics near you",
   "cta1": {
     "text": "Join Our Pilot Program",
     "link": "/join-waitlist"
   },
   "cta2": {
-    "text": "Learn More",
+    "text": "Explore Our Mission",
     "action": "scroll"
   },
-  "launchInfo": "Launching soon in Gurgaon..."
+  "launchInfo": "Launching soon..."
 }

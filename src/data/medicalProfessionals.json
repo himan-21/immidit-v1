@@ -1,0 +1,104 @@
+{
+  "title": "Join Our Network of Healthcare Heroes",
+  "subtitle": "Be part of a movement transforming healthcare delivery in India",
+  "intro": "We're building a community of dedicated medical professionals who believe in making healthcare accessible and convenient. Join us in bringing quality care directly to those who need it.",
+  "forNurses": {
+    "title": "For Nurses & Paramedics",
+    "benefits": [
+      {
+        "icon": "⏰",
+        "title": "Flexible Schedule",
+        "description": "Work on your terms - choose assignments that fit your availability and lifestyle"
+      },
+      {
+        "icon": "💰",
+        "title": "Fair Compensation",
+        "description": "Earn competitively for every service you provide, with transparent payment terms"
+      },
+      {
+        "icon": "🎯",
+        "title": "Professional Growth",
+        "description": "Expand your skills with diverse cases and continuous learning opportunities"
+      },
+      {
+        "icon": "🤝",
+        "title": "Supportive Network",
+        "description": "Join a community of peers with access to medical guidance when needed"
+      },
+      {
+        "icon": "📱",
+        "title": "Easy to Use Platform",
+        "description": "Simple technology that helps you focus on what you do best - caring for patients"
+      },
+      {
+        "icon": "🏥",
+        "title": "Professional Backing",
+        "description": "Work with the confidence of proper verification, support, and recognition"
+      }
+    ]
+  },
+  "forDoctors": {
+    "title": "For Doctors",
+    "benefits": [
+      {
+        "icon": "📹",
+        "title": "Remote Consultations",
+        "description": "Provide expert care through teleconsultation - work from anywhere"
+      },
+      {
+        "icon": "⏰",
+        "title": "Your Schedule",
+        "description": "Set your availability and take consultations that fit your practice"
+      },
+      {
+        "icon": "🩺",
+        "title": "Meaningful Impact",
+        "description": "Help patients who need immediate medical guidance from verified professionals"
+      },
+      {
+        "icon": "💼",
+        "title": "Additional Income",
+        "description": "Supplement your practice with flexible consultation opportunities"
+      },
+      {
+        "icon": "🔗",
+        "title": "Coordinated Care",
+        "description": "Work with on-ground nurses for comprehensive patient assessment"
+      },
+      {
+        "icon": "⚡",
+        "title": "Quick Setup",
+        "description": "Fast onboarding with simple license verification process"
+      }
+    ]
+  },
+  "howToJoin": {
+    "title": "How to Join",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Apply",
+        "description": "Submit your credentials and professional information"
+      },
+      {
+        "number": "2",
+        "title": "Verification",
+        "description": "We verify your licenses, credentials, and background"
+      },
+      {
+        "number": "3",
+        "title": "Onboarding",
+        "description": "Complete our simple platform training and orientation"
+      },
+      {
+        "number": "4",
+        "title": "Start Helping",
+        "description": "Begin accepting assignments and making an impact"
+      }
+    ]
+  },
+  "cta": {
+    "primary": "Join Our Network",
+    "secondary": "Learn More"
+  }
+}
