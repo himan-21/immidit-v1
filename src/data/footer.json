@@ -1,12 +1,12 @@
 {
   "navigation": [
-    { "label": "Problem", "href": "#problem" },
-    { "label": "Solution", "href": "#solution" },
-    { "label": "Market", "href": "#market" },
+    { "label": "Why We Exist", "href": "#why-we-exist" },
+    { "label": "What We Do", "href": "#what-we-do" },
     { "label": "How It Works", "href": "#how-it-works" },
-    { "label": "Business Model", "href": "#business-model" },
-    { "label": "Competition", "href": "#competition" },
-    { "label": "Pilot", "href": "#pilot" },
+    { "label": "For Medical Professionals", "href": "#medical-professionals" },
+    { "label": "Trust & Safety", "href": "#trust-safety" },
+    { "label": "Our Impact", "href": "#impact" },
+    { "label": "Social Impact", "href": "#social-impact" },
     { "label": "Team", "href": "#team" }
   ],
   "social": {

@@ -1,115 +1,113 @@
 {
   "emergencyCare": {
-    "title": "Customer Journey - Quick On-demand Care Flow",
-    "subtitle": "🚨 (e.g., accident, sudden illness, urgent wound dressing)",
+    "title": "For Patients - Immediate Care",
+    "subtitle": "When you need urgent medical attention at home",
     "steps": [
       {
         "icon": "📱",
         "title": "Request Help",
-        "description": "Open app → Describe your problem briefly (or call our hotline)",
-        "example": "High fever, need vitals check and blood sample"
+        "description": "Describe your medical need through the app or hotline"
       },
       {
         "icon": "🔍", 
-        "title": "Instant Matching",
-        "description": "System notifies nearby available nurses within 4-5 km. Nurse sees your 2-line problem summary → Accepts request"
+        "title": "Get Matched",
+        "description": "We connect you with a nearby verified medical professional"
       },
       {
         "icon": "📍",
-        "title": "Track in Real-Time", 
-        "description": "Watch your nurse's live location as they head to you",
-        "note": "Average arrival time: 20-30 minutes"
+        "title": "Track Arrival", 
+        "description": "Monitor your healthcare provider's location in real-time"
       },
       {
         "icon": "🩺",
-        "title": "Care & Smart Escalation",
-        "description": "Nurse performs vitals check + immediate treatment. If vitals are critical → System auto-escalates to doctor via video teleconsultation. Diagnosis recorded → Prescription + bill generated instantly"
+        "title": "Receive Care",
+        "description": "Professional assessment and treatment at your home, with doctor consultation if needed"
       }
     ]
   },
   "routineCare": {
-    "title": "Customer Journey - Routine Care Flow",
-    "subtitle": "🏥 (e.g., daily wound dressing, elderly monitoring, post-surgery care)",
+    "title": "For Patients - Ongoing Care",
+    "subtitle": "Regular medical support for continuous health needs",
     "steps": [
       {
         "icon": "📅",
-        "title": "Schedule Visit",
-        "description": "Book daily/weekly visits at your preferred time slots"
+        "title": "Schedule Visits",
+        "description": "Set up regular appointments at your convenience"
       },
       {
         "icon": "👨‍⚕️",
-        "title": "Assigned Nurse",
-        "description": "Dedicated nurse assigned for continuity of care"
+        "title": "Consistent Care",
+        "description": "Work with dedicated professionals who understand your health journey"
       },
       {
         "icon": "🩹",
-        "title": "Care Delivered", 
-        "description": "Nurse arrives at scheduled time → Performs care → Records progress in app"
+        "title": "Home Treatment", 
+        "description": "Receive care in the comfort of your home"
       },
       {
         "icon": "📊",
         "title": "Track Progress",
-        "description": "View care history, reports, and vitals trends in your dashboard"
+        "description": "Monitor your health journey through our platform"
       }
     ]
   },
   "nurses": {
-    "title": "For Nurses/Paramedics",
+    "title": "For Nurses & Paramedics",
     "steps": [
       {
         "icon": "✅",
-        "title": "Registration",
-        "description": "Sign up → Upload credentials → Background verification"
+        "title": "Join Our Network",
+        "description": "Simple registration and credential verification process"
       },
       {
         "icon": "📲",
-        "title": "Receive Requests",
-        "description": "Get notified of nearby patient requests with 2-line problem summary"
+        "title": "Accept Requests",
+        "description": "Choose assignments that fit your schedule and expertise"
       },
       {
         "icon": "🗺️",
-        "title": "Accept & Navigate",
-        "description": "Accept request → GPS navigation to patient location"
+        "title": "Navigate with Ease",
+        "description": "Get directions to reach patients efficiently"
       },
       {
         "icon": "💉",
-        "title": "Provide Care",
-        "description": "Perform vitals check + treatment → Record diagnosis → Escalate to doctor if needed"
+        "title": "Deliver Care",
+        "description": "Provide quality medical services with professional support"
       },
       {
         "icon": "💰",
-        "title": "Get Paid",
-        "description": "Instant payout after service completion (80-85% of visit fee)"
+        "title": "Earn Fairly",
+        "description": "Receive prompt compensation for your professional services"
       }
     ]
   },
   "doctors": {
-    "title": "For Doctors (Teleconsultation)",
+    "title": "For Doctors",
     "steps": [
       {
         "icon": "✅",
-        "title": "Registration",
-        "description": "Sign up → Medical license verification → Onboarding"
+        "title": "Register",
+        "description": "Quick onboarding with license verification"
       },
       {
         "icon": "🔔",
-        "title": "Receive Escalations",
-        "description": "Get notified when nurse escalates a case (critical vitals or complex diagnosis)"
+        "title": "Consultation Requests",
+        "description": "Receive notifications for cases requiring medical expertise"
       },
       {
         "icon": "📹",
-        "title": "Video Consultation",
-        "description": "Join video call → Review vitals from nurse → Diagnose & prescribe"
+        "title": "Virtual Consultation",
+        "description": "Provide expert diagnosis and prescriptions remotely"
       },
       {
         "icon": "🏥",
-        "title": "Hospital Transfer (if needed)",
-        "description": "If diagnosis requires physical examination → Coordinate hospital transfer"
+        "title": "Care Coordination",
+        "description": "Recommend hospital transfer when physical examination is needed"
       },
       {
         "icon": "💰",
-        "title": "Get Paid",
-        "description": "Earn per consultation (₹300-500 per teleconsult)"
+        "title": "Get Compensated",
+        "description": "Earn for each consultation provided"
       }
     ]
   }
